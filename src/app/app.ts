@@ -33,7 +33,7 @@ export class App {
 
   agregarProceso() {
     const lastProcess = this.processes[this.processes.length - 1];
-    const newArrivalTime = lastProcess ? lastProcess.arrivalTime + lastProcess.burstTime + 1 : 0;
+    const newArrivalTime = lastProcess ? lastProcess.arrivalTime + lastProcess.burstTime : 0;
 
     this.processes.push({
       id: 'P' + (this.processes.length + 1),

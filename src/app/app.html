@@ -17,8 +17,13 @@
   <div class="div2">
     <label>
       Algoritmo:
-      <input type="text" [(ngModel)]="algorithm" placeholder="Ej: FCFS" />
-    </label>
+<select [(ngModel)]="algorithm">
+  <option value="" disabled selected>Selecciona un algoritmo</option>
+  <option value="FCFS">FCFS</option>
+  <option value="SJF">SJF</option>
+  <option value="RR">RR</option>
+  <option value="Priority">Priority</option>
+</select>    </label>
     <button type="button" (click)="agregarProceso()">Agregar proceso</button>
   </div>
 
