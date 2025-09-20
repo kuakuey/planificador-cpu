@@ -1,0 +1,163 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  margin-inline: 10vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.div1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.conection {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+.conection button {
+  color: white;
+  background: #64B5F6;
+  font-weight: 700;
+}
+.conection button:hover{
+    background: #42A5F5;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.div2 button{
+    background: #4CAF50;
+    color: white;
+    
+}
+.div2 button:hover{
+        background: #43A047;
+    }
+
+button {
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#process {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.container-process h3,
+h1,
+.conection p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-process {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid rgb(126, 126, 126);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.container-process label {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.container-process input {
+  width: 2rem;
+}
+
+.container-process button{
+    margin-top: 1rem;
+    background: #E57373;
+    font-weight: 700;
+    color: white;
+}
+.container-process button:hover{
+    background: #EF5350;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pop-up-contenido {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.pop-up-contenido h3, 
+.pop-up-contenido h4 {
+  margin: 10px 0;
+}
+
+.pop-up-contenido ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pop-up-contenido table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.pop-up-contenido th,
+.pop-up-contenido td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.pop-up-contenido th {
+  background-color: #f2f2f2;
+}
+
+.pop-up-contenido button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pop-up-contenido button:hover {
+  background-color: #43A047;
+}
