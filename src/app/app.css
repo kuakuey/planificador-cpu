@@ -161,3 +161,47 @@ h1,
 .pop-up-contenido button:hover {
   background-color: #43A047;
 }
+
+
+.gantt-container {
+  margin-top: 20px;
+}
+
+.gantt-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gantt-row {
+  display: flex;
+  align-items: center;
+}
+
+.gantt-label {
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.gantt-bar {
+  height: 30px;
+  background-color: #4c74af;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 4px;
+}
+
+.metrics{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: baseline;
+}
+
+.metrics p{
+  margin: 0;
+  padding: 0;
+}

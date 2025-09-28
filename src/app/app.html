@@ -22,7 +22,9 @@
   <option value="FCFS">FCFS</option>
   <option value="SJF">SJF</option>
   <option value="RR">RR</option>
-  <option value="Priority">Priority</option>
+  <option value="PRIORITY">Priority</option>
+    <option value="CHS">CHS</option>
+
 </select>    </label>
     <button type="button" (click)="agregarProceso()">Agregar proceso</button>
   </div>
@@ -57,33 +59,33 @@
 </section>
 
 <!-- Popup -->
+<!-- Popup -->
 <div class="pop-up" *ngIf="mostrarPopUp">
   <div class="pop-up-contenido">
     <!-- Título -->
     <h3>Algoritmo: {{ dataPopUp.algorithm }}</h3>
 
-    <!-- Timeline -->
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Proceso</th>
-            <th>Tiempo de Comienzo</th>
-            <th>Tiempo de Finalizacion</th>
-            <th>Tiempo de Ejecucion</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let t of dataPopUp.timeline">
-              <td>{{ t.processId }}</td>
-              <td>{{ t.start }}</td>
-              <td>{{ t.end }}</td>
-              <td>{{ t.end - t.start }}</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Gantt Timeline -->
+    <div class="gantt-timeline">
+      <div class="gantt-row" *ngFor="let t of dataPopUp.timeline">
+        <span class="gantt-label">Proceso {{ t.processId }}</span>
+        <div
+          class="gantt-bar"
+          [style.width.%]="(t.end - t.start) * escala"
+          [style.marginLeft.%]="t.start * escala"
+        >
+          {{ t.end - t.start }}
+        </div>
+      </div>
     </div>
-
+        <div class="metrics" *ngIf="mostrarPopUp">
+            <p><b>Tiempo de Respuesta Promedio:</b> {{ dataPopUp.metrics.avgResponseTime }}</p>
+            <p><b>Tiempo de Retorno Promedio:</b> {{ dataPopUp.metrics.avgTurnaroundTime }}</p>
+            <p><b>Tiempo de Espera Promedio:</b> {{ dataPopUp.metrics.avgWaitingTime }}</p>
+            <p><b>Cambios de Contexto:</b> {{ dataPopUp.metrics.contextSwitches }}</p>
+            <p><b>Utilización CPU:</b> {{ dataPopUp.metrics.cpuUtilization }}</p>
+            <p><b>Rendimiento:</b> {{ dataPopUp.metrics.throughput }}</p>
+        </div>
     <!-- Botón para cerrar -->
     <button (click)="cerrarPopUp()">Cerrar</button>
   </div>

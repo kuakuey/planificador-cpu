@@ -67,6 +67,8 @@ export class App {
     });
   }
 
+  escala = 3.5;
+
   abrirPopUp(info: string = 'Aquí van tus datos', data: any = {}) {
     this.infoPopUp = info;
     this.dataPopUp = data; // ahora es objeto
